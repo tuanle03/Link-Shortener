@@ -1,0 +1,26 @@
+<div id="<%= dom_id link %>">
+  <p>
+    <strong>Url:</strong>
+    <%= link.url %>
+  </p>
+
+  <p>
+    <strong>Shorten:</strong>
+    <%= link_to short_url(link.slug), short_path(link.slug), method: :get%>
+    <button onclick="copyText('<%=short_url(link.slug)%>')"> <i class="fa-solid fa-copy"> </i> </button>
+    <%# <i class="fa-solid fa-copy"></i> %>
+  </p> 
+
+  <p>
+    <strong>Clicked:</strong>
+    <%= link.clicked %>
+    <%# <i class="bi bi-pencil"></i> %>
+  </p>
+</div>
+
+<script type="text/javascript">
+  function copyText(data) {
+    navigator.clipboard.writeText(data);
+  }
+</script>
+
