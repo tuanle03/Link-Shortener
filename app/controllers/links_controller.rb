@@ -7,6 +7,8 @@ class LinksController < ApplicationController
   def index
     @links = Link.all
     @links_count = Link.count
+
+
   end
 
   # GET /links/1 or /links/1.json
@@ -69,6 +71,18 @@ class LinksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # def qr_code
+  #   qrcode = RQRCode::QRCode.new("https://www.facebook.com/tuanle03/")
+
+  #   @svg = qrcode.as_svg(
+  #     offset: 0,
+  #     color: '000',
+  #     shape_rendering: 'crispEdges',
+  #     module_size: 6,
+  #     standalone: true
+  #   )
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
