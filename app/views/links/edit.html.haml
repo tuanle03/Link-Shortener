@@ -1,0 +1,7 @@
+%h1 Editing link
+= render "form", link: @link
+%br/
+%div
+  = link_to "Show this link", short_path
+  |
+  \#{link_to "Back to links", links_path}
