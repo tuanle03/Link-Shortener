@@ -1,0 +1,20 @@
+%p{:style => "color: green"}= notice
+%h1 Links
+%br/
+%br/
+= bar_chart Link.group(:slug).sum(:clicked), height: "200px", width: "800px"
+%br/
+= area_chart Link.group(:slug).group_by_hour_of_day(:created_at).sum(:clicked), xtitle: "Hour of day", ytitle: "Clicked", height: "500px", width: "800px"
+%br/
+= pie_chart Link.group(:slug).sum(:clicked)
+%br/
+#links
+  - @links.each do |link|
+    = render link
+    %p
+      = button_to link_path(link.id), method: :get do
+        %i.fa-solid.fa-chart-line
+        = button_to link_path(link.id), method: :delete do
+          %i.fa-solid.fa-trash-can
+= button_to new_link_path, method: :get do
+  %i.fa-solid.fa-plus
