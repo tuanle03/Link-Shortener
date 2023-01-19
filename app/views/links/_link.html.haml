@@ -7,6 +7,7 @@
     = link_to short_url(link.slug), short_path(link.slug), method: :get
     %button{:onclick => "copyText('#{short_url(link.slug)}')"}
       %i.fa-solid.fa-copy
+
   - qrcode = RQRCode::QRCode.new(short_url(link.slug))
   - @png = qrcode.as_png(
   - bit_depth: 1,
@@ -20,15 +21,17 @@
   - resize_gte_to: false,
   - size: 100
   - )
+
   %img{:src => "#{@png.to_data_url}"}/
   %p
     %strong Clicked:
     = link.clicked
+
 :javascript
   function copyText(data) {
     navigator.clipboard.writeText(data);
   }
-:javascript
+
   function copyImage(data) {
     navigator.clipboard.write(data);
   }

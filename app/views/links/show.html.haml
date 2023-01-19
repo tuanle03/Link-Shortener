@@ -1,7 +1,8 @@
 %p{:style => "color: green"}= notice
 = link_to links_path do
   %i.fa-sharp.fa-solid.fa-left-long
-= render @link
+    = render @link
+
 %div
   = button_to link_path(@link), method: :delete do
     %i.fa-solid.fa-trash-can
