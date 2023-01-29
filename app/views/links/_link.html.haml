@@ -9,18 +9,7 @@
       %i.fa-solid.fa-copy
 
   - qrcode = RQRCode::QRCode.new(short_url(link.slug))
-  - @png = qrcode.as_png(
-  - bit_depth: 1,
-  - border_modules: 4,
-  - color_mode: ChunkyPNG::COLOR_GRAYSCALE,
-  - color: 'black',
-  - file: nil,
-  - fill: 'white',
-  - module_px_size: 4,
-  - resize_exactly_to: false,
-  - resize_gte_to: false,
-  - size: 100
-  - )
+  - @png = qrcode.as_png(bit_depth: 1,cborder_modules: 4, color_mode: ChunkyPNG::COLOR_GRAYSCALE, color: 'black', file: nil, fill: 'white', module_px_size: 4, resize_exactly_to: false, resize_gte_to: false, size: 100 )
 
   %img{:src => "#{@png.to_data_url}"}/
   %p
