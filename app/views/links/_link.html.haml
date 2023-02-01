@@ -1,17 +1,13 @@
-%div{:id => "#{dom_id link}"}
+%div{id: "#{dom_id link}"}
   %p
     %strong Url:
     = link.url
   %p
     %strong Shorten:
     = link_to short_url(link.slug), short_path(link.slug), method: :get
-    %button{:onclick => "copyText('#{short_url(link.slug)}')"}
+    %button{onclick: "copyText('#{short_url(link.slug)}')"}
       %i.fa-solid.fa-copy
-
-  - qrcode = RQRCode::QRCode.new(short_url(link.slug))
-  - @png = qrcode.as_png(bit_depth: 1,cborder_modules: 4, color_mode: ChunkyPNG::COLOR_GRAYSCALE, color: 'black', file: nil, fill: 'white', module_px_size: 4, resize_exactly_to: false, resize_gte_to: false, size: 100 )
-
-  %img{:src => "#{@png.to_data_url}"}/
+  %img{src: RQRCode::QRCode.new(short_url(link.slug)).as_png(bit_depth: 1, cborder_modules: 4, color_mode: ChunkyPNG::COLOR_GRAYSCALE, color: 'black', file: nil, fill: 'white', module_px_size: 4, resize_exactly_to: false, resize_gte_to: false, size: 100).to_data_url}/
   %p
     %strong Clicked:
     = link.clicked
@@ -21,6 +17,3 @@
     navigator.clipboard.writeText(data);
   }
 
-  function copyImage(data) {
-    navigator.clipboard.write(data);
-  }
