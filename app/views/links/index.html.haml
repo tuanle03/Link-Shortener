@@ -14,7 +14,7 @@
     %p
       = button_to link_path(link.id), method: :get do
         %i.fa-solid.fa-chart-line
-        = button_to link_path(link.id), method: :delete do
-          %i.fa-solid.fa-trash-can
+      = button_to link_path(link.id), method: :delete do
+        %i.fa-solid.fa-trash-can
 = button_to new_link_path, method: :get do
   %i.fa-solid.fa-plus
