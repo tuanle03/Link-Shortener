@@ -21,7 +21,7 @@ The app can be easily deployed to a hosting service such as Heroku or AWS. Pleas
 
 ## Built With
 - Ruby on Rails - Backend
-- MySQL - Database
+- SQLite - Database
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
