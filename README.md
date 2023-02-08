@@ -13,9 +13,11 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installation
 1. Clone the repository to your local machine: `git clone https://github.com/tuanle03/Link-Shortener.git`
 2. Change into the project directory: `cd Link-Shortener`
-3. Install the dependencies: `rails install`
-4. Start the development server: `rails start`
-5. Open your browser and go to `http://localhost:3000` to view the app.
+3. Install the dependencies: `bundle install`
+4. Create the database: `rails db:create`
+5. Run the migrations: `rails db:migrate`
+6. Start the development server: `rails s`
+7. Open your browser and go to `http://localhost:3000` to view the app.
 ## Deployment
 The app can be easily deployed to a hosting service such as Heroku or AWS. Please refer to their respective documentation for more information.
 
