@@ -43,7 +43,7 @@ The app can be easily deployed to a hosting service such as Heroku or AWS. Pleas
 
 ## Built With
 - Ruby on Rails - Backend
-- SQLite - Database
+- SQLite3 - Database
 - Haml/CSS/JS - Frontend
 
 ## Contributing
