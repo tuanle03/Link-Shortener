@@ -3,6 +3,7 @@ A simple application to shorten long URLs, similar to Bitly.
 
 ## Features
 - Generate shortened links from long URLs.
+- Generate QRCode from shortened links.
 - Redirect to the original URL when a shortened link is clicked.
 - Basic statistics for each shortened link (number of clicks, etc.).
 
