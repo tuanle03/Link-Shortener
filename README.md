@@ -55,6 +55,11 @@ Contributions are what make the open source community such an amazing place to l
 ```md 
 git checkout -b [branch name]
 ```
+or 
+```md
+gco -b [branch name]
+```
+
 3. Add your file changes 
 ```md 
 git add [file change]
