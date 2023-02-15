@@ -64,6 +64,11 @@ gco -b [branch name]
 ```md 
 git add [file change]
 ```
+or 
+```md
+ga [file change]
+``` 
+
 4. Commit your Changes 
 ```md 
 git commit -m "message"
