@@ -63,7 +63,7 @@ ga [file change]
 
 4. Commit your Changes 
 ```md 
-git commit -m "message"
+gc -m "message"
 ```
 5. Push to the Branch 
 ```md
