@@ -1,14 +1,10 @@
 class LinksController < ApplicationController
-  # before_action :set_link, only: %i[ edit update destroy ]
     before_action :set_link, only: [:show]
-
 
   # GET /links or /links.json
   def index
     @links = Link.all
     @links_count = Link.count
-
-
   end
 
   # GET /links/1 or /links/1.json
@@ -26,10 +22,6 @@ class LinksController < ApplicationController
   # GET /links/new
   def new
     @link = Link.new
-  end
-
-  # GET /links/1/edit
-  def edit
   end
 
   # POST /links or /links.json
