@@ -11,7 +11,7 @@ A simple application to shorten long URLs, similar to Bitly.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
-- Ruby on Rails installed on your computer.
+ Ruby on Rails installed on your computer.
 
 ### Installation
 1. Clone the repository to your local machine
